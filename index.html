@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>薛之谦 · JOKER XUE｜把心事写成歌的人</title>
+<meta name="description" content="薛之谦粉丝向专题站：热度档案、十三张专辑、巡回演唱会、二十年经历与个人魅力。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 滚动进度 -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- 柔光跟随 -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- 背景噪点与光晕 -->
+<div class="bg-layer">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- 导航 -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo">
+    <span class="logo-cn">薛之谦</span>
+    <span class="logo-en">JOKER XUE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#heat" data-num="01">热度</a></li>
+    <li><a href="#albums" data-num="02">专辑</a></li>
+    <li><a href="#live" data-num="03">现场</a></li>
+    <li><a href="#story" data-num="04">经历</a></li>
+    <li><a href="#charm" data-num="05">魅力</a></li>
+    <li><a href="#lyrics" data-num="06">歌词</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="菜单">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-sparks" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="hero-inner">
+
+    <div class="hero-vinyl" id="heroVinyl" aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="vinyl-svg">
+        <defs>
+          <radialGradient id="vinylGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3a3340"/>
+            <stop offset="42%" stop-color="#241f28"/>
+            <stop offset="100%" stop-color="#151217"/>
+          </radialGradient>
+          <linearGradient id="labelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E7BFD2"/>
+            <stop offset="50%" stop-color="#C3AEDD"/>
+            <stop offset="100%" stop-color="#A6BFD9"/>
+          </linearGradient>
+          <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+            <stop offset="45%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="198" fill="url(#vinylGrad)"/>
+        <g stroke="#ffffff" stroke-opacity="0.05" fill="none">
+          <circle cx="200" cy="200" r="185"/><circle cx="200" cy="200" r="176"/>
+          <circle cx="200" cy="200" r="167"/><circle cx="200" cy="200" r="158"/>
+          <circle cx="200" cy="200" r="149"/><circle cx="200" cy="200" r="140"/>
+          <circle cx="200" cy="200" r="131"/><circle cx="200" cy="200" r="122"/>
+          <circle cx="200" cy="200" r="113"/><circle cx="200" cy="200" r="104"/>
+          <circle cx="200" cy="200" r="95"/>
+        </g>
+        <circle cx="200" cy="200" r="198" fill="url(#shine)"/>
+        <circle cx="200" cy="200" r="86" fill="url(#labelGrad)"/>
+        <circle cx="200" cy="200" r="86" fill="none" stroke="#ffffff" stroke-opacity="0.35"/>
+        <text x="200" y="186" text-anchor="middle" font-size="15" letter-spacing="3" fill="#3b3240" font-family="Georgia, serif">JOKER</text>
+        <text x="200" y="212" text-anchor="middle" font-size="15" letter-spacing="3" fill="#3b3240" font-family="Georgia, serif">XUE</text>
+        <line x1="150" y1="228" x2="250" y2="228" stroke="#3b3240" stroke-opacity="0.3"/>
+        <text x="200" y="246" text-anchor="middle" font-size="8" letter-spacing="2" fill="#3b3240" fill-opacity="0.7" font-family="Georgia, serif">SINCE 2005</text>
+        <circle cx="200" cy="200" r="4" fill="#FBF8F6"/>
+      </svg>
+      <div class="vinyl-arm"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="dot"></span>
+        SINGER · SONGWRITER · STORYTELLER
+      </p>
+
+      <h1 class="hero-title">
+        <span class="t-en">JOKER XUE</span>
+        <span class="t-cn">
+          <em>薛</em><em>之</em><em>谦</em>
+        </span>
+      </h1>
+
+      <p class="hero-slogan">
+        他把心事写成歌，<br>
+        我们把歌，听成了自己的故事。
+      </p>
+
+      <div class="hero-tags">
+        <span>华语流行</span>
+        <span>词曲全创作</span>
+        <span>唱演结合</span>
+        <span>谦友</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#heat" class="btn btn-primary">
+          <span>开始了解</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#lyrics" class="btn btn-ghost">听一句他的词</a>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <div class="meta-item"><b>1983</b><span>生于上海</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><b>2005</b><span>正式出道</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><b>13</b><span>张专辑</span></div>
+    </div>
+
+    <a href="#heat" class="scroll-hint">
+      <span>SCROLL</span>
+      <i></i>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 01 热度 ============ -->
+<section class="section" id="heat">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">01</span><span class="line"></span><span class="txt">POPULARITY</span></div>
+      <h2 class="sec-title">为什么他<em>一直在</em>顶流</h2>
+      <p class="sec-desc">
+        不是一夜爆红，是二十年里一次又一次被听见。<br>
+        从彩铃时代的《认真的雪》，到短视频时代的《演员》，他总能出现在某代人的耳机里。
+      </p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card reveal" data-delay="0">
+        <span class="stat-num" data-count="13">0</span>
+        <span class="stat-unit">张</span>
+        <p class="stat-label">正式录音室专辑</p>
+        <p class="stat-note">2006—2024，几乎未曾断档</p>
+      </div>
+      <div class="stat-card reveal" data-delay="80">
+        <span class="stat-num" data-count="21">0</span>
+        <span class="stat-unit">年</span>
+        <p class="stat-label">出道至今</p>
+        <p class="stat-note">2005 年《我型我秀》正式出道</p>
+      </div>
+      <div class="stat-card reveal" data-delay="160">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-unit">轮</span>
+        <p class="stat-label">个人世界巡回演唱会</p>
+        <p class="stat-note">摩天大楼 / 天外来物 等</p>
+      </div>
+      <div class="stat-card reveal" data-delay="240">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-unit">场</span>
+        <p class="stat-label">鸟巢连开</p>
+        <p class="stat-note">2023 年首度登上国家体育场</p>
+      </div>
+    </div>
+
+    <!-- 热度曲线 -->
+    <div class="chart-card reveal">
+      <div class="chart-head">
+        <div>
+          <h3>二十年大众关注度曲线</h3>
+          <p>每一个拐点，都是一首歌把人拉回来的瞬间</p>
+        </div>
+        <div class="chart-legend"><i></i> 大众关注度（示意）</div>
+      </div>
+      <div class="chart-body">
+        <svg class="line-chart" viewBox="0 0 1000 340" preserveAspectRatio="none" id="lineChart">
+          <defs>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#D98BA6" stop-opacity="0.32"/>
+              <stop offset="100%" stop-color="#D98BA6" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#A6BFD9"/>
+              <stop offset="50%" stop-color="#C3AEDD"/>
+              <stop offset="100%" stop-color="#D98BA6"/>
+            </linearGradient>
+          </defs>
+          <g class="grid-lines">
+            <line x1="0" y1="60" x2="1000" y2="60"/>
+            <line x1="0" y1="130" x2="1000" y2="130"/>
+            <line x1="0" y1="200" x2="1000" y2="200"/>
+            <line x1="0" y1="270" x2="1000" y2="270"/>
+          </g>
+          <path class="area" d="M0,250 L83,232 L166,196 L250,262 L333,285 L416,272 L500,150 L583,96 L666,80 L750,64 L833,52 L916,74 L1000,44 L1000,340 L0,340 Z" fill="url(#areaGrad)"/>
+          <path class="line" d="M0,250 L83,232 L166,196 L250,262 L333,285 L416,272 L500,150 L583,96 L666,80 L750,64 L833,52 L916,74 L1000,44" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g class="nodes">
+            <circle cx="0" cy="250" r="4"/><circle cx="83" cy="232" r="4"/><circle cx="166" cy="196" r="5"/>
+            <circle cx="250" cy="262" r="4"/><circle cx="333" cy="285" r="4"/><circle cx="416" cy="272" r="4"/>
+            <circle cx="500" cy="150" r="6" class="hot"/><circle cx="583" cy="96" r="5"/>
+            <circle cx="666" cy="80" r="5"/><circle cx="750" cy="64" r="5"/><circle cx="833" cy="52" r="6" class="hot"/>
+            <circle cx="916" cy="74" r="4"/><circle cx="1000" cy="44" r="5"/>
+          </g>
+        </svg>
+        <div class="chart-axis">
+          <span>2005</span><span>2008</span><span>2012</span><span>2015</span><span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span>
+        </div>
+      </div>
+      <div class="chart-notes">
+        <div class="note-item"><b>2006</b><p>《认真的雪》随首张专辑爆红，彩铃时代的国民度</p></div>
+        <div class="note-item"><b>2015</b><p>《演员》让他在沉寂数年后重回顶峰</p></div>
+        <div class="note-item"><b>2021</b><p>「天外来物」巡演开启，舞台美学成为话题</p></div>
+        <div class="note-item"><b>2023</b><p>鸟巢连开三场，完成从体育馆到体育场的跨越</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 专辑 ============ -->
+<section class="section section-alt" id="albums">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">02</span><span class="line"></span><span class="txt">DISCOGRAPHY</span></div>
+      <h2 class="sec-title">十八年，<em>十三张</em>唱片</h2>
+      <p class="sec-desc">
+        从 2006 年的同名专辑，到 2024 年的《守村人》。<br>
+        左右滑动，看看哪一张里藏着你的那年。
+      </p>
+    </div>
+  </div>
+
+  <div class="album-rail-wrap">
+    <div class="album-rail" id="albumRail">
+      <!-- JS 渲染 -->
+    </div>
+    <div class="rail-hint">
+      <span>← 拖动 / 滚动浏览 →</span>
+      <div class="rail-bar"><i id="railBar"></i></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="album-detail reveal" id="albumDetail">
+      <div class="ad-cover" id="adCover"></div>
+      <div class="ad-info">
+        <p class="ad-year" id="adYear">2006</p>
+        <h3 id="adName">薛之谦</h3>
+        <p class="ad-en" id="adEn">XUE ZHI QIAN</p>
+        <p class="ad-desc" id="adDesc"></p>
+        <div class="ad-tracks" id="adTracks"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 现场 ============ -->
+<section class="section" id="live">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">03</span><span class="line"></span><span class="txt">LIVE TOUR</span></div>
+      <h2 class="sec-title">他把演唱会，<em>演</em>成一场戏</h2>
+      <p class="sec-desc">
+        别人开演唱会是唱歌，他开演唱会是搭一座城。<br>
+        飞船、旋转木马、欲望之塔——每一场都像一个可以走进去的梦。
+      </p>
+    </div>
+
+    <div class="ticket-grid">
+      <article class="ticket ticket-featured reveal" data-delay="0">
+        <div class="ticket-main">
+          <div class="ticket-top">
+            <span class="tk-tag">WORLD TOUR · 第三轮</span>
+            <span class="tk-year">2021 — 至今</span>
+          </div>
+          <h3>天外来物</h3>
+          <p class="tk-sub">世界巡回演唱会 · 以第十一张专辑命名</p>
+          <p class="tk-desc">巨型飞船实景、旋转木马、欲望之塔——他把演唱会搭成了一部可以走进去的音乐剧。很多人是从这一场开始真正入坑的。</p>
+          <div class="tk-chips"><span>巨型飞船</span><span>唱演结合</span><span>沉浸叙事</span><span>一票难求</span></div>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">SEAT</span>
+          <span class="stub-code">S-11</span>
+          <div class="barcode"></div>
+        </div>
+      </article>
+
+      <article class="ticket reveal" data-delay="60">
+        <div class="ticket-main">
+          <div class="ticket-top">
+            <span class="tk-tag">FIRST SOLO</span>
+            <span class="tk-year">2008</span>
+          </div>
+          <h3>谦年传说</h3>
+          <p class="tk-sub">个人首场演唱会 · 上海</p>
+          <p class="tk-desc">出道第三年就站上个人舞台，然后迎来了漫长的低谷。回头看，这场是起点。</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">SEAT</span>
+          <span class="stub-code">A-01</span>
+          <div class="barcode"></div>
+        </div>
+      </article>
+
+      <article class="ticket reveal" data-delay="120">
+        <div class="ticket-main">
+          <div class="ticket-top">
+            <span class="tk-tag">TOUR 01</span>
+            <span class="tk-year">2017</span>
+          </div>
+          <h3>我好像在哪见过你</h3>
+          <p class="tk-sub">中国巡回演唱会 · 10 站</p>
+          <p class="tk-desc">《演员》之后的第一次大规模巡演，也是他在台上哽咽着说"我回来了"的那一年。</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">SEAT</span>
+          <span class="stub-code">B-17</span>
+          <div class="barcode"></div>
+        </div>
+      </article>
+
+      <article class="ticket reveal" data-delay="60">
+        <div class="ticket-main">
+          <div class="ticket-top">
+            <span class="tk-tag">WORLD TOUR</span>
+            <span class="tk-year">2018 — 2019</span>
+          </div>
+          <h3>摩天大楼</h3>
+          <p class="tk-sub">首轮世界巡回演唱会</p>
+          <p class="tk-desc">第一次把舞台搬到海外。高塔式的舞美，唱的是"越往上越孤独"。</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">SEAT</span>
+          <span class="stub-code">C-08</span>
+          <div class="barcode"></div>
+        </div>
+      </article>
+
+      <article class="ticket reveal" data-delay="120">
+        <div class="ticket-main">
+          <div class="ticket-top">
+            <span class="tk-tag">MILESTONE</span>
+            <span class="tk-year">2023</span>
+          </div>
+          <h3>鸟巢 · 连开三场</h3>
+          <p class="tk-sub">国家体育场</p>
+          <p class="tk-desc">从 2008 年的一场小型个唱，到站上鸟巢连开三晚，他用了十五年。</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">SEAT</span>
+          <span class="stub-code">N-03</span>
+          <div class="barcode"></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 经历 ============ -->
+<section class="section section-alt" id="story">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">04</span><span class="line"></span><span class="txt">THE STORY</span></div>
+      <h2 class="sec-title">一个人，<em>二十年</em></h2>
+      <p class="sec-desc">
+        他的故事里没有爽文剧本。<br>
+        更多是"差一点就放弃了"，然后又把歌写完了。
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line"><i id="tlProgress"></i></div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2004</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>第一次站上选秀舞台</h3>
+          <p>参加《我型我秀》海选，中途因承诺退赛，后来发现被骗。二十出头的他，先学会了被辜负。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2005</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>正式出道</h3>
+          <p>再次参加《我型我秀》并进入全国四强，凭原创《黄色枫叶》被听见，签约唱片公司。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2006</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>《认真的雪》下满了整个夏天</h3>
+          <p>首张同名专辑发行，主打歌成为一代人的彩铃记忆。那一年他 23 岁，以为一切才刚开始。</p>
+        </div>
+      </div>
+
+      <div class="tl-item tl-low reveal">
+        <div class="tl-year">2008—2014</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>漫长的低谷</h3>
+          <p>首场个人演唱会后，事业陷入停滞。合约、经济、自我怀疑一起压过来。他后来在采访里说，那几年靠开火锅店、卖衣服养音乐。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2015</div>
+        <div class="tl-dot hot"></div>
+        <div class="tl-card">
+          <h3>《演员》让他回来了</h3>
+          <p>微博段子让他重新被看见，《绅士》《演员》接连刷屏。"简单点，说话的方式简单点"成了那年所有人的签名。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2017</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>在演唱会上，喊了一个人的名字</h3>
+          <p>上海站，他唱完一首歌，对着台下说"她来了"。那年之后，"深情"这个词和他绑在了一起。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2021</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>「天外来物」启航</h3>
+          <p>以第十一张专辑命名的世界巡演开启。舞台被搭成一艘飞船，他把演唱会做成了音乐剧。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2023</div>
+        <div class="tl-dot hot"></div>
+        <div class="tl-card">
+          <h3>鸟巢，连开三场</h3>
+          <p>从体育馆到体育场，从一个人到几万人合唱。他在台上说："我用了很久才走到这里。"</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2024</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>《守村人》</h3>
+          <p>第十三张专辑。写留守、写孤独、写那些被时代落在后面的人。四十岁之后，他开始把镜头转向别人。</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2025</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>第一次登上春晚</h3>
+          <p>出道第二十年，站上了那个最大的舞台。有人说是圆满，他说只是"又唱了一首歌"。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 魅力 ============ -->
+<section class="section" id="charm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">05</span><span class="line"></span><span class="txt">CHARISMA</span></div>
+      <h2 class="sec-title">喜欢他，<em>不止</em>因为歌</h2>
+      <p class="sec-desc">
+        台上是深情到不讲道理的人，台下是能把主持人逼疯的人。<br>
+        这种反差，大概就是"薛之谦"三个字最难被替代的部分。
+      </p>
+    </div>
+
+    <div class="charm-layout">
+      <div class="radar-box reveal">
+        <svg viewBox="0 0 420 420" class="radar" id="radarChart">
+          <defs>
+            <linearGradient id="radarFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#D98BA6" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#A6BFD9" stop-opacity="0.45"/>
+            </linearGradient>
+          </defs>
+          <g class="radar-grid" id="radarGrid"></g>
+          <polygon class="radar-poly" id="radarPoly" points=""/>
+          <g class="radar-labels" id="radarLabels"></g>
+        </svg>
+        <p class="radar-cap">六维魅力 · 主观评分</p>
+      </div>
+
+      <div class="charm-cards">
+        <article class="charm-card reveal" data-delay="0">
+          <span class="cc-icon">✎</span>
+          <h3>词曲全包</h3>
+          <p>大多数作品自己作词作曲。他的词不讲究高级，但每一句都像在说人话——所以扎心。</p>
+        </article>
+        <article class="charm-card reveal" data-delay="60">
+          <span class="cc-icon">◍</span>
+          <h3>唱演结合</h3>
+          <p>他唱慢歌时会演。皱眉、低头、把话筒递向观众——现场的情绪浓度是他最大的武器。</p>
+        </article>
+        <article class="charm-card reveal" data-delay="120">
+          <span class="cc-icon">☺</span>
+          <h3>段子手本手</h3>
+          <p>综艺里插科打诨、自黑到没底线。你很难把台上那个哭着唱《演员》的人和他是同一个人。</p>
+        </article>
+        <article class="charm-card reveal" data-delay="180">
+          <span class="cc-icon">♡</span>
+          <h3>把伤疤写成作品</h3>
+          <p>失恋、失败、被误解，他都不藏。这种坦白对听的人来说，是一种被允许脆弱的安全感。</p>
+        </article>
+        <article class="charm-card reveal" data-delay="240">
+          <span class="cc-icon">✧</span>
+          <h3>审美的偏执</h3>
+          <p>从专辑视觉到舞台装置，他坚持自己盯细节。天外来物的飞船，是他一场一场改出来的。</p>
+        </article>
+        <article class="charm-card reveal" data-delay="300">
+          <span class="cc-icon">∞</span>
+          <h3>长情</h3>
+          <p>对一个人，对一群歌迷，对写歌这件事。二十年了，他还在每年交作业。</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 歌词 ============ -->
+<section class="section section-lyric" id="lyrics">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">06</span><span class="line"></span><span class="txt">LYRICS</span></div>
+      <h2 class="sec-title">总有一句，<em>是你的</em>那句</h2>
+    </div>
+
+    <div class="lyric-stage reveal">
+      <div class="lyric-quote-mark">“</div>
+      <blockquote class="lyric-text" id="lyricText">雪下得那么深，下得那么认真。</blockquote>
+      <p class="lyric-from" id="lyricFrom">《认真的雪》· 2006</p>
+      <div class="lyric-dots" id="lyricDots"></div>
+    </div>
+
+    <div class="lyric-tags reveal" id="lyricTags"></div>
+  </div>
+</section>
+
+<!-- ============ 07 留言 ============ -->
+<section class="section" id="note">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-label"><span class="num">07</span><span class="line"></span><span class="txt">MESSAGE WALL</span></div>
+      <h2 class="sec-title">写给老薛<em>一句话</em></h2>
+      <p class="sec-desc">如果有一天他能看见，你最想说哪一句？</p>
+    </div>
+
+    <div class="note-form reveal">
+      <input type="text" id="noteName" maxlength="12" placeholder="你的昵称（可留空）">
+      <textarea id="noteText" maxlength="80" placeholder="写下你想说的话……（最多 80 字）"></textarea>
+      <div class="note-form-foot">
+        <span class="note-count"><b id="noteCount">0</b>/80</span>
+        <button class="btn btn-primary" id="noteSubmit">贴上墙</button>
+      </div>
+    </div>
+
+    <div class="note-wall" id="noteWall"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="fb-cn">薛之谦</span>
+        <span class="fb-en">JOKER XUE</span>
+        <p>把心事写成歌的人，值得被好好听见。</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#heat">热度</a><a href="#albums">专辑</a><a href="#live">现场</a>
+        <a href="#story">经历</a><a href="#charm">魅力</a><a href="#lyrics">歌词</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>本站为粉丝向非官方专题页面，仅用于学习与交流，不代表艺人及所属公司立场。</p>
+      <p>图片与视觉均为原创设计，专辑、演唱会等信息整理自公开资料。</p>
+      <p class="copyright">© 2026 JOKER XUE FAN PAGE · MADE WITH ♡</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
